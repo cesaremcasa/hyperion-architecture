@@ -1,10 +1,21 @@
 # Hyperion
 
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![XGBoost](https://img.shields.io/badge/XGBoost-137B80?style=for-the-badge)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![NASA imagery](https://img.shields.io/badge/NASA%20imagery-0B3D91?style=for-the-badge&logo=nasa&logoColor=white)
+![Status](https://img.shields.io/badge/status-active%20research-E36209?style=for-the-badge)
+![License](https://img.shields.io/badge/license-MIT-3C9A5F?style=for-the-badge)
+
+![Hyperion](https://www.mycelliumlab.com/assets/hyperion-social.jpg)
+
 **Urban compound flood intelligence. The next six hours, not the next thirty years.**
 
 Hyperion produces a calibrated 0 to 6 hour nowcast and an operational score for compound urban flooding, where rain, tide, river and terrain stack on top of each other.
 
 This repository documents the method and architecture. The implementation lives in a private repository.
+
+**[Project page on Mycellium Lab](https://www.mycelliumlab.com/hyperion)**
 
 ---
 
@@ -91,7 +102,11 @@ The frontend consumes the existing API rather than reimplementing any flood logi
 
 The implementation is private. The method is not, because a forecasting method that cannot be examined should not be trusted by anyone making an operational decision with it.
 
-Part of [Mycellium Lab](https://mycelliumlab.com).
+Part of [Mycellium Lab](https://www.mycelliumlab.com). See the [Hyperion project page](https://www.mycelliumlab.com/hyperion).
+
+## License
+
+MIT. See [LICENSE](LICENSE).
 
 ---
 
