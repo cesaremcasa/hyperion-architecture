@@ -1,26 +1,19 @@
 {
+  "project": "Hyperion",
   "source_repository": "cesaremcasa/Hyperion",
   "source_commit": "2207ed061c92943e3e524c7adefcecc49e52371e",
-  "exported_on": "2026-10-05",
-  "adaptation": "Only package import paths changed; demo/tests are new synthetic harnesses.",
-  "modules": [
+  "files": [
     {
-      "source_path": "src/hyperion/labs/leakage_inspector.py",
-      "public_path": "src/hyperion_demo/leakage_inspector.py",
-      "source_sha256": "705bf017d14bddfd2573e199973da4ec742a64445d5f3fa03fc90911cd07e591",
-      "public_sha256": "705bf017d14bddfd2573e199973da4ec742a64445d5f3fa03fc90911cd07e591"
+      "path": "src/hyperion/labs/leakage_inspector.py",
+      "sha256": "705bf017d14bddfd2573e199973da4ec742a64445d5f3fa03fc90911cd07e591"
     },
     {
-      "source_path": "src/hyperion/labs/split_contracts.py",
-      "public_path": "src/hyperion_demo/split_contracts.py",
-      "source_sha256": "53cbbf10511abe22fa690ddf2a0837000c27bf0509159d49f6fe4721d2ad7947",
-      "public_sha256": "53cbbf10511abe22fa690ddf2a0837000c27bf0509159d49f6fe4721d2ad7947"
+      "path": "src/hyperion/labs/split_contracts.py",
+      "sha256": "53cbbf10511abe22fa690ddf2a0837000c27bf0509159d49f6fe4721d2ad7947"
     },
     {
-      "source_path": "src/hyperion/labs/science_metrics.py",
-      "public_path": "src/hyperion_demo/science_metrics.py",
-      "source_sha256": "0bed0173b0adca6e8a52a47481af861d9ac79664483ef0c1f99a6c30f4be8a0b",
-      "public_sha256": "0bed0173b0adca6e8a52a47481af861d9ac79664483ef0c1f99a6c30f4be8a0b"
+      "path": "src/hyperion/labs/science_metrics.py",
+      "sha256": "0bed0173b0adca6e8a52a47481af861d9ac79664483ef0c1f99a6c30f4be8a0b"
     }
   ]
 }

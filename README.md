@@ -1,40 +1,32 @@
 # Hyperion
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![XGBoost](https://img.shields.io/badge/XGBoost-137B80?style=for-the-badge)
-![Status](https://img.shields.io/badge/status-active%20research-E36209?style=for-the-badge)
-![License](https://img.shields.io/badge/license-MIT-3C9A5F?style=for-the-badge)
+**Compound flood intelligence — data engineering, modelling and operational decision support.**
 
-![Hyperion](https://www.mycelliumlab.com/assets/hyperion-social.jpg)
+Hyperion brings rainfall, coastal water levels, river observations and terrain into a regional operating picture. I built its Python ingestion pipelines, historical event analysis, modelling infrastructure, authenticated service and operator interface within Mycellium Lab.
 
-**Urban compound flood intelligence. The next six hours, not the next thirty years.**
+## Engineering
 
-Hyperion studies compound urban flooding for Mycellium Lab. This repository documents the method and an offline demo; the full implementation is private.
+- **Data pipelines:** NOAA, NWS, USGS and NASA integrations, regional source registries, cached observations and transformation provenance.
+- **Modelling:** gradient boosting and XGBoost with feature-leakage inspection, spatial and temporal split contracts, calibration and operational metrics.
+- **Runtime:** an authenticated Python HTTP service, expiring sessions, workspace access controls and background jobs with process-level timeout isolation.
+- **Interface:** a React/Next.js operator workspace presenting source freshness, event timelines, regional layers and reports.
 
-**[Project page on Mycellium Lab](https://www.mycelliumlab.com/hyperion)**
-
-## Research scope
-
-The system combines historical event analysis, coarse-grid scores, leakage checks and operator workflows. Live NHC/NWS feeds describe hazards; historical scores are not live forecasts. The demo uses synthetic data, not surveyed flood truth.
-
-![Hyperion public research product homepage, captured 2026-10-05. Illustrative and historical evidence; not forecast or backend validation.](docs/screenshots/hyperion-public.jpg)
-
-Phase 1 focuses on Florida, Big Bend and Louisiana. Recife is closed. The service uses Python's standard-library HTTP server; scikit-learn and XGBoost support research workflows.
-
-## Offline demo
-
-Python 3.11+; no network or API key required:
-
-```bash
-python3 -m venv .venv
-. .venv/bin/activate
-python -m pip install -r requirements-dev.txt
-PYTHONPATH=src python -m hyperion_demo.demo
-PYTHONPATH=src python -m pytest -q
+```mermaid
+flowchart LR
+    A[Federal observations] --> B[Ingestion and provenance]
+    B --> C[Historical analysis and modelling]
+    C --> D[Authenticated service]
+    D --> E[Operator workspace]
 ```
 
-The demo runs Hyperion's leakage inspection, temporal split and calibration metrics on a frozen CC0-1.0 synthetic fixture. It verifies the fixture hash and keeps test timestamps and labels out of calibration.
+Live federal hazard observations and historical compound-event analysis are distinct parts of the system. Its regional models are research tools; the architecture keeps data provenance, uncertainty and evaluation boundaries explicit.
 
-Source modules and their original revision are recorded in [SOURCE_PROVENANCE.json](SOURCE_PROVENANCE.json). Methods are open for scrutiny. This repository does not provide commercial service, parcel-level scoring or live flood forecasting. See [LICENSE](LICENSE).
+## Selected source
 
-**Cesar Augusto** · [GitHub](https://github.com/cesaremcasa) · [LinkedIn](https://www.linkedin.com/in/cesar-augusto-22943a351/) · [korvo.dev](https://korvo.dev)
+This repository presents the architecture and original source excerpts for leakage inspection, split validation and metric calculation. Their origin and hashes are recorded in [SOURCE_PROVENANCE.json](SOURCE_PROVENANCE.json). The complete product implementation remains private.
+
+## Product
+
+![Hyperion regional intelligence interface](docs/screenshots/hyperion-public.jpg)
+
+[Explore Hyperion](https://www.mycelliumlab.com/hyperion/access) · [Mycellium Lab](https://www.mycelliumlab.com) · [License](LICENSE)
